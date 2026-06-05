@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Akash B L</title>
+  <meta name="description" content="Get in touch with Akash B L. Send a message, connect on LinkedIn, or call directly." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="../assets/images/profile.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/pages.css" />
+</head>
+<body>
+
+<!-- Page Loader -->
+<div class="page-loader" id="page-loader">
+  <div class="loader-logo">AB</div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- Particles Canvas -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-logo">Akash B L</a>
+
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="education.html">Education</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-sun" id="theme-icon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="education.html">Education</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- ===================== PAGE HEADER ===================== -->
+<section class="page-header-section">
+  <div class="ambient-glow glow-blue" style="width:400px;height:400px;top:-100px;left:30%"></div>
+  <div class="page-header-inner reveal">
+    <div class="section-tag"><i class="fas fa-paper-plane"></i> Get In Touch</div>
+    <h1 class="section-title">Contact <span>Me</span></h1>
+    <p class="section-subtitle">Reach out for internships, questions, or software opportunities.</p>
+  </div>
+</section>
+
+<!-- ===================== CONTACT CONTENT ===================== -->
+<section class="section" style="padding-top:0">
+  <div class="section-inner">
+    <div class="contact-grid">
+
+      <!-- Left: Contact info -->
+      <div class="contact-info-panel reveal-left">
+        <h2 class="section-title" style="font-size:1.8rem; margin-bottom:12px">Contact <span>Information</span></h2>
+        <p class="section-subtitle" style="margin-bottom:32px">Feel free to connect directly via email, phone, or LinkedIn.</p>
+
+        <div class="contact-info-card card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact-label">Email Address</div>
+            <a href="mailto:akashakubl@gmail.com" class="contact-value" id="contact-email-val">akashakubl@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-info-card card">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <div class="contact-label">Phone Number</div>
+            <a href="tel:7795047331" class="contact-value" id="contact-phone-val">7795047331</a>
+          </div>
+        </div>
+
+        <div class="contact-info-card card">
+          <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+          <div>
+            <div class="contact-label">LinkedIn profile</div>
+            <a href="https://www.linkedin.com/in/akash-b-l-0abb05404" target="_blank" rel="noopener" class="contact-value" id="contact-linkedin-val">akash-b-l-0abb05404</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Contact form -->
+      <div class="contact-form-panel card reveal-right">
+        <h2 class="section-title" style="font-size:1.8rem; margin-bottom:12px">Send <span>Message</span></h2>
+        <p class="section-subtitle" style="margin-bottom:32px">Use the form below to drop me an email directly.</p>
+
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="cf-name" class="form-label">Full Name *</label>
+            <input type="text" id="cf-name" class="form-control" placeholder="John Doe" required />
+          </div>
+
+          <div class="form-group">
+            <label for="cf-email" class="form-label">Email Address *</label>
+            <input type="email" id="cf-email" class="form-control" placeholder="john@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="cf-message" class="form-label">Message *</label>
+            <textarea id="cf-message" class="form-control" placeholder="Hello, I'd like to talk about..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="send-message-btn" style="width:100%; justify-content:center">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+
+          <div id="form-feedback" class="form-feedback"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">Akash B L</a>
+        <p>BCA Student & Cybersecurity Enthusiast. Building secure and meaningful software.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="education.html">Education</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:akashakubl@gmail.com">Email Me</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Akash B L. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="mailto:akashakubl@gmail.com" aria-label="Email" id="footer-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/akash-b-l-0abb05404" target="_blank" rel="noopener" aria-label="LinkedIn" id="footer-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="tel:7795047331" aria-label="Phone" id="footer-phone">
+          <i class="fas fa-phone"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll To Top -->
+<button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
